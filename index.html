@@ -3,130 +3,273 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية - FB Publisher</title>
+    <title>FB Group Publisher PRO | النشر التلقائي في مجموعات فيسبوك</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Tajawal', 'Segoe UI', system-ui, sans-serif;
-            line-height: 1.7;
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
             background: #0f0f1e;
             color: #e0e0e0;
+            line-height: 1.6;
         }
-        h1, h2 {
-            color: #bb86fc;
-            border-bottom: 1px solid #3a3a55;
-            padding-bottom: 8px;
-        }
-        h1 { text-align: center; border-bottom: none; }
-        h3 { color: #bb86fc; margin-top: 20px; }
-        a { color: #bb86fc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
         .container {
-            background: #1a1a30;
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid #3a3a55;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .warning-box {
-            background: rgba(255, 107, 107, 0.1);
-            border-right: 4px solid #ff6b6b;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 8px;
+        /* header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            flex-wrap: wrap;
+            gap: 15px;
         }
-        .footer {
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #bb86fc, #7c3aed);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #bb86fc, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #bb86fc, #7c3aed);
+            border: none;
+            padding: 10px 24px;
+            border-radius: 40px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: transform 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            transform: scale(1.02);
+        }
+        .btn-large {
+            padding: 14px 32px;
+            font-size: 1.1rem;
+        }
+        /* hero section */
+        .hero {
             text-align: center;
-            margin-top: 30px;
-            font-size: 0.85rem;
-            color: #888;
-            border-top: 1px solid #3a3a55;
-            padding-top: 20px;
+            padding: 60px 0 40px;
         }
-        ul, ol { padding-right: 20px; }
-        li { margin: 8px 0; }
-        .highlight { color: #bb86fc; font-weight: bold; }
+        .badge {
+            display: inline-block;
+            background: rgba(187, 134, 252, 0.15);
+            border: 1px solid rgba(187, 134, 252, 0.3);
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+        .badge span {
+            color: #bb86fc;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #bb86fc, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-sub {
+            font-size: 1.1rem;
+            color: #aaa;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* features grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 60px 0;
+        }
+        .feature-card {
+            background: rgba(30, 30, 50, 0.6);
+            border: 1px solid #2a2a45;
+            border-radius: 20px;
+            padding: 24px;
+            transition: transform 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #bb86fc;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #bb86fc;
+        }
+        .feature-desc {
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+        /* pricing */
+        .pricing {
+            background: rgba(30, 30, 50, 0.6);
+            border: 1px solid #2a2a45;
+            border-radius: 30px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #bb86fc;
+        }
+        /* footer */
+        .footer {
+            border-top: 1px solid #2a2a45;
+            padding: 30px 0;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        .footer a {
+            color: #bb86fc;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .install-steps {
+            background: rgba(30, 30, 50, 0.4);
+            border-radius: 24px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        .step-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .step {
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+            padding: 15px;
+        }
+        .step-number {
+            width: 35px;
+            height: 35px;
+            background: #bb86fc;
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .header { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🔐 سياسة الخصوصية وإخلاء المسؤولية</h1>
-        <p style="text-align:center">لتطبيق وامتداد المتصفح <strong>FB Publisher PRO</strong></p>
-        <p style="text-align:center">آخر تحديث: 3 يونيو 2026</p>
-
-        <div class="warning-box">
-            <strong>⚠️ إخلاء مسؤولية هام (يُرجى القراءة بعناية):</strong><br>
-            هذه الأداة مصممة لمساعدة المستخدمين على إدارة منشوراتهم في مجموعات <strong>فيس بوك التي هم أعضاء فيها بالفعل</strong>. 
-            استخدام هذه الأداة قد ينتهك شروط خدمة فيسبوك إذا تم بطريقة مفرطة أو مزعجة. <span class="highlight">أنت (المستخدم) تتحمل المسؤولية الكاملة عن أي عواقب قد تترتب على استخدام هذه الأداة، بما في ذلك حظر حسابك على فيسبوك.</span> 
-            نحن لا نتحمل أي مسؤولية عن تعليق أو حظر حسابات المستخدمين نتيجة استخدام هذه الأداة.
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-area">
+                <div class="logo-icon">📱</div>
+                <div class="logo-text">FB Group Publisher PRO</div>
+            </div>
+            <a href="https://sare26-fb-publisher-backend.hf.space" class="btn-primary">⬇️ فتح لوحة التحكم</a>
         </div>
 
-        <h2>1. المعلومات التي نجمعها</h2>
-        <p>عند استخدامك لامتداد المتصفح "FB Publisher"، قد نقوم بجمع ومعالجة المعلومات التالية:</p>
-        <ul>
-            <li><strong>📧 بريدك الإلكتروني:</strong> نستخدم بريدك الإلكتروني (الذي تقدمه عبر تسجيل الدخول بحساب Google) لإنشاء حسابك في نظامنا، وإدارة اشتراكك، والتواصل معك بخصوص الخدمة.</li>
-            <li><strong>👤 اسمك وصورتك الشخصية:</strong> نستخدم اسمك لشخصنة تجربتك داخل لوحة التحكم.</li>
-            <li><strong>🌐 عنوان IP:</strong> يتم تسجيل عنوان IP الخاص بك لأغراض أمنية، ولمنع إساءة الاستخدام، ولتحليل الأداء.</li>
-            <li><strong>📊 بيانات الاستخدام والإعدادات:</strong> نقوم بتخزين قوائم المجموعات التي تحفظها، وإعدادات التأخير، والتفضيلات الأخرى لتخصيص تجربتك.</li>
-            <li><strong>🍪 ملفات تعريف الارتباط (Cookies):</strong> نستخدم ملفات تعريف الارتباط الأساسية للحفاظ على حالة تسجيل دخولك وضمان عمل التطبيق بشكل صحيح.</li>
-        </ul>
-
-        <h2>2. كيف نستخدم معلوماتك</h2>
-        <p>نستخدم المعلومات التي نجمعها للأغراض التالية فقط:</p>
-        <ul>
-            <li>✅ تقديم خدمة النشر التلقائي في مجموعات فيسبوك التي أنت عضو فيها.</li>
-            <li>✅ إدارة اشتراكك وفترة التجربة المجانية من خلال PayPal.</li>
-            <li>✅ تحسين أداء الإضافة وحل المشكلات التقنية.</li>
-            <li>✅ التواصل معك (عبر البريد الإلكتروني) بخصوص التحديثات الهامة أو تغييرات الخدمة.</li>
-        </ul>
-        <p><strong>نحن لا نستخدم معلوماتك لأي غرض تسويقي غير مرغوب فيه، ولا نبيع بياناتك لأي طرف ثالث.</strong></p>
-
-        <h2>3. مشاركة البيانات مع أطراف ثالثة</h2>
-        <p>نشارك بياناتك فقط مع الأطراف التالية، ولأغراض تشغيل الخدمة فقط:</p>
-        <ul>
-            <li><strong>☁️ Supabase:</strong> قاعدة البيانات الرئيسية التي نستضيف عليها معلومات حسابك وإعداداتك (الاسم، البريد الإلكتروني، القوائم المحفوظة).</li>
-            <li><strong>💳 PayPal:</strong> لمعالجة مدفوعات الاشتراك. <span class="highlight">نحن لا نرى أو نخزن معلومات بطاقتك البنكية مطلقًا</span>؛ يتم التعامل معها بالكامل عبر PayPal.</li>
-            <li><strong>🔑 Google (OAuth):</strong> لتسجيل الدخول إلى التطبيق. نحصل فقط على بريدك الإلكتروني، اسمك، وصورتك الشخصية (البيانات الأساسية).</li>
-        </ul>
-
-        <h2>4. أمان بياناتك</h2>
-        <p>نحن نأخذ أمان بياناتك على محمل الجد:</p>
-        <ul>
-            <li>يتم تشفير الاتصال بين جهازك وخوادمنا باستخدام تقنية SSL/TLS (HTTPS).</li>
-            <li>تتم جميع عمليات النشر التلقائي على جهازك مباشرة. <strong>نحن لا نقوم بتخزين منشوراتك أو الصور التي تنشرها على خوادمنا</strong>.</li>
-            <li>نحتفظ ببياناتك فقط طالما كان حسابك نشطًا. يمكنك طلب حذف حسابك في أي وقت.</li>
-        </ul>
-
-        <h2>5. حقوقك وطريقة حذف بياناتك</h2>
-        <p>لديك الحق الكامل في التحكم ببياناتك:</p>
-        <ul>
-            <li>يمكنك طلب تصدير جميع بياناتك لديك.</li>
-            <li>يمكنك طلب حذف حسابك وكل بياناتك نهائيًا بأي وقت. للقيام بذلك، يرجى التواصل عبر البريد الإلكتروني: <a href="mailto:saresare2555@hotmail.com">saresare2555@hotmail.com</a>.</li>
-            <li>سيتم حذف بياناتك خلال 30 يوماً من استلام طلبك.</li>
-        </ul>
-
-        <h2>6. إخلاء المسؤولية الكامل عن النشر التلقائي في فيسبوك</h2>
-        <div class="warning-box">
-            <strong>🚨 أنت وحدك من يتحمل مسؤولية استخدام هذه الأداة:</strong><br><br>
-            <ul style="margin-bottom:0">
-                <li>هذه الأداة تتيح لك النشر في المجموعات التي <strong>أنت عضو فيها بالفعل</strong>. <span class="highlight">النشر في مجموعات لا تملك صلاحية الإشراف عليها (أو النشر بشكل مفرط/تجاري) قد ينتهك شروط خدمة فيسبوك</span> وقد يؤدي إلى تقييد أو حظر حسابك.</li>
-                <li>نحن ننصحك بشدة باستخدام التأخير العشوائي المدمج في الأداة (بين 90 و 191 ثانية) وتجنب النشر المفرط (أكثر من 50 منشور يومياً).</li>
-                <li>نحن لسنا مسؤولين عن أي عواقب تترتب على استخدام هذه الأداة، بما في ذلك على سبيل المثال لا الحصر: حظر حسابك على فيسبوك، فقدان وصولك إلى المجموعات، أو أي عقوبات أخرى تفرضها فيسبوك.</li>
-                <li>باستخدامك لهذه الأداة، أنت توافق على أننا (مطورو التطبيق) لسنا الطرف المسؤول عن علاقتك بفيسبوك أو عن مدى امتثال استخدامك لشروط خدمتهم.</li>
-            </ul>
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="badge"><span>✨ شهر كامل مجاني</span> ثم 2.50$ كل شهرين فقط</div>
+            <h1>انشر في <span class="gradient-text">كل مجموعاتك</span><br>بضغطة زر واحدة</h1>
+            <div class="hero-sub">
+                أداة احترافية لنشر منشوراتك تلقائيًا في مجموعات فيسبوك مع نظام أمان متقدم وتأخير ذكي.<br>
+                <span style="color:#bb86fc">حمّل الإضافة وابدأ خلال دقيقتين.</span>
+            </div>
+            <a href="https://sare26-fb-publisher-backend.hf.space/extension/fb-publisher-bridge.zip" class="btn-primary btn-large" download>
+                ⬇️ تحميل الإضافة مجاناً
+            </a>
+            <p style="font-size:0.7rem; margin-top:15px; color:#555">متوافق مع Chrome • مجاني للتحميل</p>
         </div>
 
-        <h2>7. تحديثات سياسة الخصوصية</h2>
-        <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر (مثلاً عند إضافة ميزات جديدة أو تغيير طريقة معالجة البيانات). سنقوم بإعلامك بأي تغييرات جوهرية عبر إشعار داخل لوحة التحكم أو عبر البريد الإلكتروني. تاريخ آخر تحديث هو المذكور في بداية الصفحة.</p>
+        <!-- Features -->
+        <div class="features">
+            <div class="feature-card"><div class="feature-icon">🎯</div><div class="feature-title">نشر تلقائي</div><div class="feature-desc">انشر منشوراتك في عشرات المجموعات بضغطة زر واحدة</div></div>
+            <div class="feature-card"><div class="feature-icon">🔒</div><div class="feature-title">آمن وموثوق</div><div class="feature-desc">يعمل عبر إضافة متصفح خفيفة - حسابك يبقى آمنًا</div></div>
+            <div class="feature-card"><div class="feature-icon">⏱️</div><div class="feature-title">تأخير ذكي</div><div class="feature-desc">تأخير عشوائي بين 90 و 191 ثانية لحماية حسابك</div></div>
+            <div class="feature-card"><div class="feature-icon">🖼️</div><div class="feature-title">نشر مع الصور</div><div class="feature-desc">رفع حتى 10 صور مع كل منشور</div></div>
+            <div class="feature-card"><div class="feature-icon">📋</div><div class="feature-title">قوائم محفوظة</div><div class="feature-desc">احفظ قوائم مجموعاتك المفضلة لاستخدامها لاحقًا</div></div>
+            <div class="feature-card"><div class="feature-icon">📊</div><div class="feature-title">متابعة فورية</div><div class="feature-desc">شاهد تقدم النشر لحظة بلحظة مع روابط المنشورات</div></div>
+        </div>
 
-        <h2>8. الاتصال بنا</h2>
-        <p>إذا كان لديك أي استفسار أو طلب بخصوص بياناتك (تصدير، تصحيح، حذف)، يرجى التواصل معنا على البريد الإلكتروني الرسمي للدعم:</p>
-        <p style="text-align:center; font-size:1.1rem"><strong>📧 <a href="mailto:saresare2555@hotmail.com">saresare2555@hotmail.com</a></strong></p>
+        <!-- Install Steps -->
+        <div class="install-steps">
+            <h3 style="text-align:center; margin-bottom:25px; color:#bb86fc">📥 خطوات التثبيت</h3>
+            <div class="step-list">
+                <div class="step"><div class="step-number">1</div><div style="font-weight:bold">حمّل وافك الضغط</div><div style="font-size:0.75rem; color:#888">تحصل على مجلد fb-publisher-bridge</div></div>
+                <div class="step"><div class="step-number">2</div><div style="font-weight:bold">افتح chrome://extensions</div><div style="font-size:0.75rem; color:#888">في شريط Chrome</div></div>
+                <div class="step"><div class="step-number">3</div><div style="font-weight:bold">فعّل "وضع المطور"</div><div style="font-size:0.75rem; color:#888">Developer mode</div></div>
+                <div class="step"><div class="step-number">4</div><div style="font-weight:bold">اسحب المجلد</div><div style="font-size:0.75rem; color:#888">أو اضغط "تحميل غير مضغوط"</div></div>
+                <div class="step"><div class="step-number">5</div><div style="font-weight:bold">سجّل الدخول وابدأ النشر</div><div style="font-size:0.75rem; color:#888">اضغط أيقونة الإضافة</div></div>
+            </div>
+        </div>
 
+        <!-- Pricing -->
+        <div class="pricing">
+            <h2 style="margin-bottom:15px">💰 سعر بسيط، قيمة كبيرة</h2>
+            <div class="price">$2.50</div>
+            <div style="color:#aaa; margin-bottom:15px">كل شهرين عبر PayPal</div>
+            <div style="color:#bb86fc; margin-bottom:25px">🎁 شهر كامل مجاني عند الاشتراك</div>
+            <a href="https://sare26-fb-publisher-backend.hf.space/extension/fb-publisher-bridge.zip" class="btn-primary" download>⬇️ حمّل الإضافة الآن</a>
+        </div>
+
+        <!-- Footer with Privacy Policy Link -->
         <div class="footer">
-            © 2026 FB Publisher PRO - جميع الحقوق محفوظة
+            <p>FB Group Publisher PRO © 2026</p>
+            <p style="margin-top:8px">
+                <a href="/privacy.html">🔐 سياسة الخصوصية</a>
+            </p>
         </div>
     </div>
 </body>

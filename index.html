@@ -21,7 +21,6 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-        /* header */
         .header {
             display: flex;
             justify-content: space-between;
@@ -73,7 +72,6 @@
             padding: 14px 32px;
             font-size: 1.1rem;
         }
-        /* hero section */
         .hero {
             text-align: center;
             padding: 60px 0 40px;
@@ -110,7 +108,6 @@
             margin-left: auto;
             margin-right: auto;
         }
-        /* features grid */
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -142,7 +139,6 @@
             font-size: 0.85rem;
             color: #aaa;
         }
-        /* pricing */
         .pricing {
             background: rgba(30, 30, 50, 0.6);
             border: 1px solid #2a2a45;
@@ -156,7 +152,6 @@
             font-weight: bold;
             color: #bb86fc;
         }
-        /* footer */
         .footer {
             border-top: 1px solid #2a2a45;
             padding: 30px 0;
@@ -172,36 +167,6 @@
         .footer a:hover {
             text-decoration: underline;
         }
-        .install-steps {
-            background: rgba(30, 30, 50, 0.4);
-            border-radius: 24px;
-            padding: 30px;
-            margin: 40px 0;
-        }
-        .step-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .step {
-            flex: 1;
-            min-width: 180px;
-            text-align: center;
-            padding: 15px;
-        }
-        .step-number {
-            width: 35px;
-            height: 35px;
-            background: #bb86fc;
-            color: #000;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 12px;
-            font-weight: bold;
-        }
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .header { flex-direction: column; }
@@ -210,7 +175,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
             <div class="logo-area">
                 <div class="logo-icon">📱</div>
@@ -219,21 +183,17 @@
             <a href="https://sare26-fb-publisher-backend.hf.space" class="btn-primary">⬇️ فتح لوحة التحكم</a>
         </div>
 
-        <!-- Hero Section -->
         <div class="hero">
             <div class="badge"><span>✨ شهر كامل مجاني</span> ثم 2.50$ كل شهرين فقط</div>
             <h1>انشر في <span class="gradient-text">كل مجموعاتك</span><br>بضغطة زر واحدة</h1>
             <div class="hero-sub">
-                أداة احترافية لنشر منشوراتك تلقائيًا في مجموعات فيسبوك مع نظام أمان متقدم وتأخير ذكي.<br>
-                <span style="color:#bb86fc">حمّل الإضافة وابدأ خلال دقيقتين.</span>
+                أداة احترافية لنشر منشوراتك تلقائيًا في مجموعات فيسبوك مع نظام أمان متقدم وتأخير ذكي.
             </div>
-            <a href="https://sare26-fb-publisher-backend.hf.space/extension/fb-publisher-bridge.zip" class="btn-primary btn-large" download>
-                ⬇️ تحميل الإضافة مجاناً
+            <a href="https://sare26-fb-publisher-backend.hf.space" class="btn-primary btn-large">
+                🚀 ابدأ الآن مجاناً
             </a>
-            <p style="font-size:0.7rem; margin-top:15px; color:#555">متوافق مع Chrome • مجاني للتحميل</p>
         </div>
 
-        <!-- Features -->
         <div class="features">
             <div class="feature-card"><div class="feature-icon">🎯</div><div class="feature-title">نشر تلقائي</div><div class="feature-desc">انشر منشوراتك في عشرات المجموعات بضغطة زر واحدة</div></div>
             <div class="feature-card"><div class="feature-icon">🔒</div><div class="feature-title">آمن وموثوق</div><div class="feature-desc">يعمل عبر إضافة متصفح خفيفة - حسابك يبقى آمنًا</div></div>
@@ -243,28 +203,14 @@
             <div class="feature-card"><div class="feature-icon">📊</div><div class="feature-title">متابعة فورية</div><div class="feature-desc">شاهد تقدم النشر لحظة بلحظة مع روابط المنشورات</div></div>
         </div>
 
-        <!-- Install Steps -->
-        <div class="install-steps">
-            <h3 style="text-align:center; margin-bottom:25px; color:#bb86fc">📥 خطوات التثبيت</h3>
-            <div class="step-list">
-                <div class="step"><div class="step-number">1</div><div style="font-weight:bold">حمّل وافك الضغط</div><div style="font-size:0.75rem; color:#888">تحصل على مجلد fb-publisher-bridge</div></div>
-                <div class="step"><div class="step-number">2</div><div style="font-weight:bold">افتح chrome://extensions</div><div style="font-size:0.75rem; color:#888">في شريط Chrome</div></div>
-                <div class="step"><div class="step-number">3</div><div style="font-weight:bold">فعّل "وضع المطور"</div><div style="font-size:0.75rem; color:#888">Developer mode</div></div>
-                <div class="step"><div class="step-number">4</div><div style="font-weight:bold">اسحب المجلد</div><div style="font-size:0.75rem; color:#888">أو اضغط "تحميل غير مضغوط"</div></div>
-                <div class="step"><div class="step-number">5</div><div style="font-weight:bold">سجّل الدخول وابدأ النشر</div><div style="font-size:0.75rem; color:#888">اضغط أيقونة الإضافة</div></div>
-            </div>
-        </div>
-
-        <!-- Pricing -->
         <div class="pricing">
             <h2 style="margin-bottom:15px">💰 سعر بسيط، قيمة كبيرة</h2>
             <div class="price">$2.50</div>
             <div style="color:#aaa; margin-bottom:15px">كل شهرين عبر PayPal</div>
             <div style="color:#bb86fc; margin-bottom:25px">🎁 شهر كامل مجاني عند الاشتراك</div>
-            <a href="https://sare26-fb-publisher-backend.hf.space/extension/fb-publisher-bridge.zip" class="btn-primary" download>⬇️ حمّل الإضافة الآن</a>
+            <a href="https://sare26-fb-publisher-backend.hf.space" class="btn-primary">🚀 ابدأ الآن</a>
         </div>
 
-        <!-- Footer with Privacy Policy Link -->
         <div class="footer">
             <p>FB Group Publisher PRO © 2026</p>
             <p style="margin-top:8px">
